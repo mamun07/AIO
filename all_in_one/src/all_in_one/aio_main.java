@@ -65,6 +65,7 @@ public class aio_main extends javax.swing.JFrame {
         header_min.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         header_min.setForeground(new java.awt.Color(255, 255, 255));
         header_min.setText("-");
+        header_min.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         header_min.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 header_minMouseClicked(evt);
@@ -74,6 +75,7 @@ public class aio_main extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("X");
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel2MouseClicked(evt);
@@ -117,6 +119,11 @@ public class aio_main extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton2.setText("Currency Converter");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -178,8 +185,14 @@ public class aio_main extends javax.swing.JFrame {
     }//GEN-LAST:event_header_minMouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        AgeCalculator ageBtn = new AgeCalculator();
+        ageBtn.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        CurrencyConverter currCal= new CurrencyConverter();
+        currCal.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
